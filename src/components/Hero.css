@@ -1,0 +1,136 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  min-height: 90vh;
+  position: relative;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.badge svg {
+  color: #F0A8A0; /* Soft coral/peach */
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.hero-title span {
+  color: #92A69A; /* Deeper sage green */
+  display: block;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.hero-image-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  z-index: 2;
+  padding: 16px;
+  border-radius: 32px;
+  background: var(--glass-bg);
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+  display: block;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.blob-1 {
+  width: 300px;
+  height: 300px;
+  background-color: var(--color-peach);
+  top: -20px;
+  right: -20px;
+}
+
+.blob-2 {
+  width: 250px;
+  height: 250px;
+  background-color: var(--color-lavender);
+  bottom: -20px;
+  left: 0;
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+    gap: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .badge {
+    margin: 0 auto 24px;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 100px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .blob {
+    width: 200px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,33 @@
+/* App specific styles, mostly handled by components now */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Subtle background gradients */
+.app-container::before {
+  content: '';
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-peach) 0%, rgba(250, 220, 217, 0) 70%);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.app-container::after {
+  content: '';
+  position: fixed;
+  bottom: -10%;
+  right: -10%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-lavender) 0%, rgba(232, 229, 240, 0) 70%);
+  z-index: -1;
+  opacity: 0.6;
+}

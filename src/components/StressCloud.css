@@ -1,0 +1,160 @@
+.stress-cloud-section {
+  position: relative;
+  z-index: 2;
+}
+
+.stress-cloud-container {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cloud-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cloud-area {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border: 1px dashed var(--glass-border);
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  user-select: none;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: box-shadow 0.2s ease;
+}
+
+.bubble:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.all-clear {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.clear-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.temperature-reading {
+  width: 100%;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.reading-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.thermometer-icon {
+  color: var(--color-peach-dark);
+  margin-top: 4px;
+}
+
+.reading-text p {
+  margin: 0;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  font-size: 1.05rem;
+}
+
+.small-btn {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .stress-cloud-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .cloud-area {
+    height: 300px;
+  }
+  
+  .temperature-reading {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .reading-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bubble {
+    font-size: 0.8rem;
+  }
+}
+
+.recommendation-text {
+  margin-top: 0.5rem !important;
+  font-size: 0.9rem !important;
+  color: var(--color-sage-dark) !important;
+  font-weight: 600 !important;
+}
+
+.meter-container {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meter-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.meter-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}

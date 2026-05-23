@@ -1,0 +1,42 @@
+.bg-effects-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+.blob-sage {
+  width: 40vw;
+  height: 40vw;
+  background-color: var(--color-sage);
+  top: -10%;
+  left: -10%;
+}
+
+.blob-peach {
+  width: 35vw;
+  height: 35vw;
+  background-color: var(--color-peach);
+  bottom: -10%;
+  right: -10%;
+}
+
+.blob-lavender {
+  width: 45vw;
+  height: 45vw;
+  background-color: var(--color-lavender);
+  top: 40%;
+  left: 30%;
+  opacity: 0.2;
+}
